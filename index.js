@@ -10,10 +10,10 @@ function searchRepositories(){
     const repoList = '<ul>' + data.items.map( r => {
       return (`
             <li>
-              <h2><a href="${data.html_url}">${data.name}</a></h2>
-              <p><img src="${data.owner.avatar_url}"></p>
-              <p>by: <a href="https://github.com/${data.owner.login}">${data.owner.login}</a></p>
-              <p><a href="#" data-repository="${data.name}" data-owner="${data.owner.login}" onclick="showCommits(this)">Show Commits</a></p>
+              <h2><a href="${r.html_url}">${r.name}</a></h2>
+              <p><img src="${r.owner.avatar_url}"></p>
+              <p>by: <a href="https://github.com/${r.owner.login}">${data.owner.login}</a></p>
+              <p><a href="#" data-repository="${r.name}" data-owner="${r.owner.login}" onclick="showCommits(this)">Show Commits</a></p>
             </li>`;
             
     $("#results").html(repoList);
