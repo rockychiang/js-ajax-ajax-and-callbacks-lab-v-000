@@ -23,6 +23,6 @@ function searchRepositories(){
 }
 
 function showCommits(el) {
-  const url = 'https://api.github.com/search/repositories?q=' + searchTerms;
+  const url = 'https://api.github.com/repos/' + username + '/' + name + '/commits'
   
 }
