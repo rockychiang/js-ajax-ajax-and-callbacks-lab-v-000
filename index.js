@@ -40,7 +40,7 @@ function showCommits(el) {
     }).join('') + "</ul>";
     
     $("#details").html(commitList);
-  });
+  }).fail();
 }
 
 function displayError() {
