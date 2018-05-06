@@ -28,7 +28,7 @@ function showCommits(el) {
       return (`
             <li>
               <h2>SHA: ${r.sha}</h2>
-              <p>${r.message}</p>
+              <p>${r.commit.message}</p>
               <p><img src="${r.author.avatar_url}"></p>
               <p>by: <a href="${r.author.html_url}">${r.author.login}</a></p>
             </li>`
