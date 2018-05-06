@@ -28,7 +28,7 @@ function showCommits(el) {
   const url = 'https://api.github.com/repos/' + username + '/' + name + '/commits'
   
   $.get(url).done(data => {
-    const repoList = '<ul>' + data.map(r => {
+    const commitList = '<ul>' + data.map(r => {
       return (`
             <li>
               <h2><a href="${r.html_url}">${r.name}</a></h2>
