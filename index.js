@@ -11,7 +11,7 @@ function searchRepositories(){
     return (`
           <li>
             <h2><a href="${r.html_url}">${r.name}</a></h2>
-            <p>Watchers: ${r.watchers_count}</p>
+            <p>by: <a href="${r.html_url}">${r.name}</a></p>
             <p>Forks: ${r.forks_count}</p>
             <p>Issues: ${r.open_issues_count}</p>
           </li>`
