@@ -8,6 +8,7 @@ function searchRepositories(){
 
   $.get(url).done(data => {
     const repoList = '<ul>' + data.items.map( r => {
+      console.log(r)
       return (`
             <li>
               <h2><a href="${r.html_url}">${r.name}</a></h2>
