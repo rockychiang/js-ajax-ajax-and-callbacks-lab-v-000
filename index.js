@@ -27,8 +27,10 @@ function showCommits(el) {
   const username = el.dataset.owner;
   const url = 'https://api.github.com/repos/' + username + '/' + name + '/commits'
   
-  $.get(url).done()
+  $.get(url).done(
+    
+    $("#details").html(commitList);
+  )
   
   
-  $("#details").html(commitList);
 }
