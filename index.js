@@ -23,6 +23,8 @@ function searchRepositories(){
 }
 
 function showCommits(el) {
+  const name = el.dataset.repository;
+  const username = el.dataset.owner;
   const url = 'https://api.github.com/repos/' + username + '/' + name + '/commits'
   
 }
