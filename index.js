@@ -7,7 +7,8 @@ function searchRepositories(){
   const url = `https://api.github.com/search/repositories?q=${searchTerms}`;
 
   $.get(url).done(data => {
-    const repoList = '<ul>' + data.items.map( r => {`
+    const repoList = '<ul>' + data.items.map( r => {
+      return (`
       <li>
         <h2><a href="${data.html_url}">${data.name}</a></h2>
         <p><img src="${data.owner.avatar_url}"></p>
