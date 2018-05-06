@@ -4,7 +4,6 @@ $(document).ready(function (){
 
 function searchRepositories(){
   const query = $('#searchTerms').val();
-  console.log(query)
   const url = `https://api.github.com/search/repositories?q=${query}`;
   console.log(url)
   
