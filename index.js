@@ -22,6 +22,6 @@ function searchRepositories(){
   });
 }
 
-function showCommits() {
+function showCommits(el) {
   
 }
