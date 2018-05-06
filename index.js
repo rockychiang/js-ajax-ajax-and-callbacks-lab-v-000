@@ -1,5 +1,5 @@
 $(document).ready(function (){
-  const url = 
+  const url = 'https://api.github.com/users/' + username + '/repos'
   
   $.get()
   
