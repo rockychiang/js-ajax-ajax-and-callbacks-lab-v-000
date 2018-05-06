@@ -30,5 +30,5 @@ function showCommits(el) {
   $.get(url).done()
   
   
-  $("#details").html(repoList);
+  $("#details").html(commitList);
 }
