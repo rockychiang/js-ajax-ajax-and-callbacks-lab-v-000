@@ -10,7 +10,7 @@ function searchRepositories(){
     const repoList = `
       <li>
         <h2><a href="${data.html_url}">${data.name}</a></h2>
-        <p><img src="${r.owner.avatar_url}"></p>
+        <p><img src="${data.owner.avatar_url}"></p>
         <p>by: <a href="https://github.com/${r.owner.login}">${r.owner.login}</a></p>
         <p><a href="#" data-repository="${r.name}" data-owner="${r.owner.login}" onclick="showCommits(this)">Show Commits</a></p>
       </li>`;
