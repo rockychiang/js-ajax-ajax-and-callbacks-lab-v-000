@@ -14,7 +14,9 @@ function searchRepositories(){
               <p><img src="${r.owner.avatar_url}"></p>
               <p>by: <a href="https://github.com/${r.owner.login}">${data.owner.login}</a></p>
               <p><a href="#" data-repository="${r.name}" data-owner="${r.owner.login}" onclick="showCommits(this)">Show Commits</a></p>
-            </li>`;
+            </li>`
+            );
+    }).join('') + "</ul>";
             
     $("#results").html(repoList);
   }).fail(displayError);
