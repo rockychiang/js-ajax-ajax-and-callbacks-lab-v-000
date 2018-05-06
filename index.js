@@ -7,8 +7,8 @@ function searchRepositories(){
   const url = 'https://api.github.com/search/repositories?q=' + searchTerms;
   
   $.get(url).done(data => {
-      const repoList = '<ul>' + repos.map(r => {
-   return (`
+    const repoList = '<ul>' + data.map(r => {
+    return (`
           <li>
             <h2><a href="${r.html_url}">${r.name}</a></h2>
             <p>Watchers: ${r.watchers_count}</p>
@@ -16,8 +16,8 @@ function searchRepositories(){
             <p>Issues: ${r.open_issues_count}</p>
           </li>`
           )
-  }).join('') + "</ul>"
-  document.getElementById("repositories").innerHTML = repoList
+    }).join('') + "</ul>"
+    
     const repoList = '<ul>'${data.items.map(r => {
 
     '<li><a href="'+ r.html_url +'">' + r.name + '</a> - <a href="#" data-repository="' + r.name + '" data-username="' + r.owner.login + '" onclick="showCommits(this)">Show Commits</a></li>').join('')}</ul>`;
