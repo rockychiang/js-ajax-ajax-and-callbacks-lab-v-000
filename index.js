@@ -18,9 +18,6 @@ function searchRepositories(){
           )
     }).join('') + "</ul>"
     
-    const repoList = '<ul>'${data.items.map(r => {
-
-    '<li><a href="'+ r.html_url +'">' + r.name + '</a> - <a href="#" data-repository="' + r.name + '" data-username="' + r.owner.login + '" onclick="showCommits(this)">Show Commits</a></li>').join('')}</ul>`;
     $("#results").html(repoList);
   });
 }
