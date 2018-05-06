@@ -1,5 +1,5 @@
 $(document).ready(function (){
-  const searchTerms = .getElementById("searchTerms").value;
+  const searchTerms = document.getElementById("searchTerms").value;
   const url = 'https://api.github.com/search/repositories?q=' + document;
   
   $.get(url).done(data => )
