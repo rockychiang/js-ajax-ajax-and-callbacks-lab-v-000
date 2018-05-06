@@ -28,4 +28,7 @@ function showCommits(el) {
   const url = 'https://api.github.com/repos/' + username + '/' + name + '/commits'
   
   $.get(url).done()
+  
+  
+  $("#details").html(repoList);
 }
