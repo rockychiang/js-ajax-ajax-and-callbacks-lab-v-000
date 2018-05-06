@@ -33,7 +33,7 @@ function showCommits(el) {
             <li>
               <h2>SHA: ${r.sha}</h2>
               <p><img src="${r.author.avatar_url}"></p>
-              <p>by: <a href="https://github.com/${r.author.login}">${r.author.login}</a></p>
+              <p>by: <a href="https://github.com/${r.author.html_url}">${r.author.login}</a></p>
               <p><a href="#" data-repository="${r.name}" data-owner="${r.owner.login}" onclick="showCommits(this)">Show Commits</a></p>
             </li>`
             );
