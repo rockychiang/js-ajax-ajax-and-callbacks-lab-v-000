@@ -11,7 +11,7 @@ function searchRepositories(){
     return (`
           <li>
             <h2><a href="${r.html_url}">${r.name}</a></h2>
-            <p><img src="${}"></p>
+            <p><img src="${r.owner.avatar_url}"></p>
             <p>by: <a href="https://github.com/${r.owner.login}">${r.owner.login}</a></p>
             <p>Forks: ${r.forks_count}</p>
             <p>Issues: ${r.open_issues_count}</p>
