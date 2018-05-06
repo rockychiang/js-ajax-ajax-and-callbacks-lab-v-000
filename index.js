@@ -4,7 +4,7 @@ $(document).ready(function (){
 
 function searchRepositories(){
   const searchTerms = $("#searchTerms").value;
-  const url = 'https://api.github.com/search/repositories?q=' + searchTerms;
+  const url = `https://api.github.com/search/repositories?q=${searchTerms}`;
   
   $.get(url).done(data => {
     const repoList = '<ul>' + data.map(r => {
